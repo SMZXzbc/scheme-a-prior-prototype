@@ -1,0 +1,286 @@
+[
+  {
+    "case_id": "DU_004",
+    "scene_type": "dense urban",
+    "frequency_GHz": 28,
+    "condition": "street corner NLOS",
+    "dominant_mechanism": "reflection",
+    "mechanism_weights": {
+      "los": 0.03,
+      "reflection": 0.62,
+      "diffraction": 0.10,
+      "scattering": 0.20,
+      "penetration": 0.05
+    },
+    "blockage_risk": "high",
+    "channel_sparsity": "high",
+    "expected_delay_spread": "high",
+    "expected_angular_spread": "medium",
+    "beam_alignment_sensitivity": "high",
+    "reasoning_summary": "In dense urban 28 GHz street corner NLOS, the direct path is blocked, so reflections dominate while diffraction and penetration remain weak."
+  },
+
+
+
+  
+  {
+"case_id": "DU_005",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "glass building reflection",
+"dominant_mechanism": "reflection",
+"mechanism_weights": {
+"los": 0.15,
+"reflection": 0.65,
+"diffraction": 0.03,
+"scattering": 0.10,
+"penetration": 0.07
+},
+"blockage_risk": "medium",
+"channel_sparsity": "high",
+"expected_delay_spread": "medium",
+"expected_angular_spread": "medium",
+"beam_alignment_sensitivity": "high",
+"reasoning_summary": "In dense urban 28 GHz glass building reflection, specular reflection from glass facades dominates while diffraction and penetration remain weak."
+},
+
+
+
+
+{
+"case_id": "DU_006",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "open square LOS",
+"dominant_mechanism": "LOS",
+"mechanism_weights": {
+"los": 0.55,
+"reflection": 0.30,
+"diffraction": 0.03,
+"scattering": 0.07,
+"penetration": 0.05
+},
+"blockage_risk": "medium",
+"channel_sparsity": "high",
+"expected_delay_spread": "low",
+"expected_angular_spread": "low",
+"beam_alignment_sensitivity": "high",
+"reasoning_summary": "In dense urban 28 GHz open square LOS, the direct path dominates, with moderate building and ground reflections and weak diffraction or penetration."
+},
+
+
+
+{
+"case_id": "DU_007",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "building blockage NLOS",
+"dominant_mechanism": "reflection",
+"mechanism_weights": {
+"los": 0.02,
+"reflection": 0.58,
+"diffraction": 0.08,
+"scattering": 0.22,
+"penetration": 0.10
+},
+"blockage_risk": "high",
+"channel_sparsity": "high",
+"expected_delay_spread": "high",
+"expected_angular_spread": "medium",
+"beam_alignment_sensitivity": "high",
+"reasoning_summary": "In dense urban 28 GHz building blockage NLOS, the direct path is blocked, so reflected and scattered paths dominate while diffraction and penetration remain weak."
+},
+
+
+
+
+{
+"case_id": "DU_008",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "rough concrete scattering",
+"dominant_mechanism": "scattering",
+"mechanism_weights": {
+"los": 0.10,
+"reflection": 0.25,
+"diffraction": 0.05,
+"scattering": 0.55,
+"penetration": 0.05
+},
+"blockage_risk": "medium",
+"channel_sparsity": "high",
+"expected_delay_spread": "medium",
+"expected_angular_spread": "high",
+"beam_alignment_sensitivity": "high",
+"reasoning_summary": "Rough concrete surfaces at 28 GHz enhance scattering, while diffraction and penetration remain weak in dense urban mmWave channels."
+},
+
+
+
+{
+"case_id": "DU_009",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "moving user beam misalignment",
+"dominant_mechanism": "mixed",
+"mechanism_weights": {
+"los": 0.25,
+"reflection": 0.45,
+"diffraction": 0.05,
+"scattering": 0.20,
+"penetration": 0.05
+},
+"blockage_risk": "high",
+"channel_sparsity": "high",
+"expected_delay_spread": "medium",
+"expected_angular_spread": "medium",
+"beam_alignment_sensitivity": "high",
+"reasoning_summary": "In dense urban 28 GHz mobility, beam misalignment weakens stable direct links and makes reflected and scattered paths important."
+},
+
+
+
+
+{
+"case_id": "DU_010",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "vehicle blockage",
+"dominant_mechanism": "mixed",
+"mechanism_weights": {
+"los": 0.05,
+"reflection": 0.50,
+"diffraction": 0.05,
+"scattering": 0.25,
+"penetration": 0.15
+},
+"blockage_risk": "high",
+"channel_sparsity": "high",
+"expected_delay_spread": "medium",
+"expected_angular_spread": "medium",
+"beam_alignment_sensitivity": "high",
+"reasoning_summary": "Vehicle blockage at 28 GHz strongly weakens the direct path, making reflected and scattered paths from vehicles and buildings more important."
+},
+
+
+
+
+{
+"case_id": "DU_011",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "narrow street canyon NLOS",
+"dominant_mechanism": "reflection",
+"mechanism_weights": {
+"los": 0.03,
+"reflection": 0.65,
+"diffraction": 0.08,
+"scattering": 0.20,
+"penetration": 0.04
+},
+"blockage_risk": "high",
+"channel_sparsity": "high",
+"expected_delay_spread": "high",
+"expected_angular_spread": "medium",
+"beam_alignment_sensitivity": "high",
+"reasoning_summary": "In a dense urban 28 GHz narrow street canyon NLOS case, building-wall reflections dominate while diffraction and penetration remain weak."
+},
+
+
+
+
+{
+"case_id": "DU_012",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "high-rise building reflection",
+"dominant_mechanism": "reflection",
+"mechanism_weights": {
+"los": 0.15,
+"reflection": 0.60,
+"diffraction": 0.05,
+"scattering": 0.15,
+"penetration": 0.05
+},
+"blockage_risk": "medium",
+"channel_sparsity": "high",
+"expected_delay_spread": "medium",
+"expected_angular_spread": "medium",
+"beam_alignment_sensitivity": "high",
+"reasoning_summary": "In dense urban 28 GHz high-rise reflection, building facades provide strong reflected paths while diffraction and penetration remain weak."
+},
+
+
+
+
+{
+"case_id": "DU_013",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "indoor penetration from outdoor base station",
+"dominant_mechanism": "penetration",
+"mechanism_weights": {
+"los": 0.05,
+"reflection": 0.25,
+"diffraction": 0.05,
+"scattering": 0.10,
+"penetration": 0.55
+},
+"blockage_risk": "high",
+"channel_sparsity": "high",
+"expected_delay_spread": "medium",
+"expected_angular_spread": "medium",
+"beam_alignment_sensitivity": "high",
+"reasoning_summary": "Indoor reception from an outdoor 28 GHz base station is dominated by weak penetration through building materials, with reflections providing secondary paths."
+},
+
+
+
+
+{
+"case_id": "DU_014",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "heavy pedestrian blockage",
+"dominant_mechanism": "mixed",
+"mechanism_weights": {
+"los": 0.05,
+"reflection": 0.40,
+"diffraction": 0.05,
+"scattering": 0.40,
+"penetration": 0.10
+},
+"blockage_risk": "high",
+"channel_sparsity": "high",
+"expected_delay_spread": "medium",
+"expected_angular_spread": "high",
+"beam_alignment_sensitivity": "high",
+"reasoning_summary": "Heavy pedestrian blockage at 28 GHz strongly weakens the direct path, so reflected and scattered paths become the main contributors."
+},
+
+
+
+{
+"case_id": "DU_015",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "multiple reflected paths",
+"dominant_mechanism": "reflection",
+"mechanism_weights": {
+"los": 0.10,
+"reflection": 0.65,
+"diffraction": 0.05,
+"scattering": 0.15,
+"penetration": 0.05
+},
+"blockage_risk": "medium",
+"channel_sparsity": "high",
+"expected_delay_spread": "high",
+"expected_angular_spread": "medium",
+"beam_alignment_sensitivity": "high",
+"reasoning_summary": "In dense urban 28 GHz with multiple reflected paths, building reflections dominate while diffraction and penetration remain weak."
+}
+
+
+
+]

@@ -1,0 +1,317 @@
+[
+  {
+    "case_id": "DU_006",
+    "scene_type": "dense urban",
+    "frequency_GHz": 28,
+    "condition": "open square LOS",
+
+    "radio_map_task": "pathloss_map_generation",
+
+    "dominant_mechanism": "LOS",
+    "mechanism_weights": {
+      "los": 0.55,
+      "reflection": 0.30,
+      "diffraction": 0.03,
+      "scattering": 0.07,
+      "penetration": 0.05
+    },
+
+    "pathloss_level_hint": "medium",
+
+    "los_region_hint": "LOS regions are expected to dominate near the transmitter and across open square areas.",
+    "nlos_region_hint": "NLOS regions are limited and mainly appear behind nearby buildings or obstacles around the square.",
+    "shadowing_region_hint": "Weak to moderate shadowing may occur behind buildings, trees, or large objects near the square boundary.",
+    "blockage_region_hint": "Nearby buildings, trees, and temporary obstacles may create local blockage, but the main open area remains mostly LOS.",
+
+    "reflection_region_hint": "Reflections may occur from surrounding building facades, ground surfaces, and nearby walls.",
+    "diffraction_region_hint": "Diffraction is weak at 28 GHz and may only occur around building edges near the square boundary.",
+    "scattering_region_hint": "Scattering is limited but may come from rough ground, small objects, trees, and street furniture.",
+
+    "building_density_hint": "medium",
+    "material_hint": "Concrete, glass facades, and ground surfaces may provide secondary reflected paths in the open square environment.",
+    "effective_scatterer_hint": "Surrounding building walls, ground surfaces, trees, and street furniture may act as effective scatterers.",
+
+    "spatial_variation_hint": "Spatial variation is relatively smooth in the open LOS area but becomes stronger near buildings and shadow boundaries.",
+    "map_pattern_hint": "The generated pathloss map should show relatively lower pathloss near the transmitter and open LOS regions, with localized higher pathloss behind buildings or obstacles.",
+
+    "conditioning_summary": "For dense urban 28 GHz open square LOS radio map generation, the prior should emphasize LOS-dominant propagation, moderate pathloss, smooth spatial variation in open areas, and local shadowing near obstacles."
+  },
+  {
+    "case_id": "DU_011",
+    "scene_type": "dense urban",
+    "frequency_GHz": 28,
+    "condition": "narrow street canyon NLOS",
+
+    "radio_map_task": "pathloss_map_generation",
+
+    "dominant_mechanism": "reflection",
+    "mechanism_weights": {
+      "los": 0.03,
+      "reflection": 0.65,
+      "diffraction": 0.08,
+      "scattering": 0.20,
+      "penetration": 0.04
+    },
+
+    "pathloss_level_hint": "high",
+
+    "los_region_hint": "LOS regions are very limited and may only exist near the transmitter or along short open street segments.",
+    "nlos_region_hint": "Most receiver locations inside the narrow street canyon are likely to be NLOS, especially behind building corners.",
+    "shadowing_region_hint": "Strong shadowing is expected behind dense buildings and around street corners where the direct path is blocked.",
+    "blockage_region_hint": "Building blocks and street-canyon corners are the main blockage sources.",
+
+    "reflection_region_hint": "Strong reflected components are likely along building facades, street canyon walls, and smooth vertical surfaces.",
+    "diffraction_region_hint": "Diffraction may occur around building edges and corners, but its contribution is weak at 28 GHz.",
+    "scattering_region_hint": "Moderate scattering may come from rough walls, street furniture, vehicles, and small objects inside the canyon.",
+
+    "building_density_hint": "high",
+    "material_hint": "Concrete and glass building facades are likely to dominate the propagation environment; glass surfaces may enhance specular reflection, while rough concrete may increase scattering.",
+    "effective_scatterer_hint": "Nearby building walls, street corners, vehicles, and rough facade surfaces are likely effective scatterers.",
+
+    "spatial_variation_hint": "Strong spatial variation with sharp pathloss changes near blockage boundaries and street corners.",
+    "map_pattern_hint": "The generated pathloss map should show high pathloss in deep NLOS regions, relatively lower pathloss along reflection-supported street segments, and sharp transitions near building edges.",
+
+    "conditioning_summary": "For dense urban 28 GHz narrow street canyon NLOS radio map generation, the prior should emphasize reflection-dominant propagation, high pathloss, limited LOS coverage, strong shadowing behind buildings, and sharp spatial variation near street corners."
+  },
+  {
+    "case_id": "DU_014",
+    "scene_type": "dense urban",
+    "frequency_GHz": 28,
+    "condition": "heavy pedestrian blockage",
+
+    "radio_map_task": "pathloss_map_generation",
+
+    "dominant_mechanism": "mixed",
+    "mechanism_weights": {
+      "los": 0.05,
+      "reflection": 0.40,
+      "diffraction": 0.05,
+      "scattering": 0.40,
+      "penetration": 0.10
+    },
+
+    "pathloss_level_hint": "high",
+
+    "los_region_hint": "LOS regions are strongly reduced because pedestrians may block or weaken the direct path.",
+    "nlos_region_hint": "NLOS-like regions may appear behind dense pedestrian groups and around blocked street segments.",
+    "shadowing_region_hint": "Strong local shadowing is expected behind groups of pedestrians and around crowded areas.",
+    "blockage_region_hint": "Dense pedestrian groups are the main dynamic blockage sources, while nearby buildings may also create static blockage.",
+
+    "reflection_region_hint": "Reflected components from building facades and nearby walls may help maintain coverage when the direct path is blocked.",
+    "diffraction_region_hint": "Diffraction around human bodies and building edges is weak at 28 GHz and contributes only slightly.",
+    "scattering_region_hint": "Strong scattering may occur from pedestrians, vehicles, rough walls, and street objects.",
+
+    "building_density_hint": "high",
+    "material_hint": "Human bodies strongly attenuate 28 GHz signals, while nearby concrete and glass facades may provide reflected or scattered components.",
+    "effective_scatterer_hint": "Pedestrians, nearby building facades, vehicles, and street objects are likely effective scatterers.",
+
+    "spatial_variation_hint": "Spatial variation is strong and dynamic, with localized high-loss regions around pedestrian blockage areas.",
+    "map_pattern_hint": "The generated pathloss map should show localized high-pathloss shadow regions behind pedestrian groups, while reflected and scattered paths may partially support coverage around nearby buildings.",
+
+    "conditioning_summary": "For dense urban 28 GHz heavy pedestrian blockage radio map generation, the prior should emphasize dynamic blockage, strong local shadowing, increased scattering, and localized high-pathloss regions."
+  },
+  {
+"case_id": "DU_016",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "glass building reflection",
+"radio_map_task": "pathloss_map_generation",
+"dominant_mechanism": "reflection",
+"mechanism_weights": {
+"los": 0.12,
+"reflection": 0.62,
+"diffraction": 0.04,
+"scattering": 0.16,
+"penetration": 0.06
+},
+"pathloss_level_hint": "medium",
+"los_region_hint": "LOS regions may appear near the transmitter and along open street segments with clear visibility.",
+"nlos_region_hint": "NLOS regions are likely behind building blocks, around street corners, and in areas where direct paths are blocked by dense urban structures.",
+"shadowing_region_hint": "Moderate to strong shadowing is expected behind buildings and in regions not supported by strong glass-facade reflections.",
+"blockage_region_hint": "Dense building blocks, street corners, and urban obstacles are the main blockage sources.",
+"reflection_region_hint": "Strong specular reflected components are likely near smooth glass building facades and along street segments facing reflective surfaces.",
+"diffraction_region_hint": "Weak diffraction may occur around building edges and corners, but its contribution is limited at 28 GHz.",
+"scattering_region_hint": "Moderate scattering may come from rough concrete surfaces, vehicles, street furniture, and irregular facade structures.",
+"building_density_hint": "high",
+"material_hint": "Glass building facades are likely to enhance specular reflection, while concrete and rough surfaces may introduce additional scattering; building penetration remains weak at 28 GHz.",
+"effective_scatterer_hint": "Glass facades, nearby building walls, street corners, vehicles, and rough urban surfaces are likely effective propagation-related scatterers.",
+"spatial_variation_hint": "Moderate to strong spatial variation with lower pathloss near reflection-supported regions and sharper changes near blockage boundaries.",
+"map_pattern_hint": "The generated pathloss map should show relatively lower pathloss along glass-facade reflection paths, higher pathloss in blocked NLOS regions, and clear spatial transitions between reflection-supported and shadowed areas.",
+"conditioning_summary": "For dense urban 28 GHz glass building reflection radio map generation, the prior should emphasize reflection-dominant propagation, medium pathloss, strong glass-facade reflection regions, weak diffraction, limited penetration, and sharp spatial variation near blocked urban structures."
+},
+{
+"case_id": "DU_017",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "vehicle blockage near street corner",
+"radio_map_task": "pathloss_map_generation",
+"dominant_mechanism": "reflection",
+"mechanism_weights": {
+"los": 0.05,
+"reflection": 0.50,
+"diffraction": 0.07,
+"scattering": 0.33,
+"penetration": 0.05
+},
+"pathloss_level_hint": "high",
+"los_region_hint": "LOS regions are likely limited to areas near the transmitter and open street segments not blocked by vehicles or building corners.",
+"nlos_region_hint": "NLOS regions are likely behind the vehicle blockage, around the street corner, and behind dense building blocks.",
+"shadowing_region_hint": "Strong shadowing is expected behind the blocking vehicle and near the street corner where the direct path is obstructed.",
+"blockage_region_hint": "Vehicles, building corners, and dense urban building blocks are the main blockage sources in this scenario.",
+"reflection_region_hint": "Reflected components are likely along nearby building facades, glass surfaces, vehicle surfaces, and street-corner walls.",
+"diffraction_region_hint": "Weak diffraction may occur around building edges and vehicle boundaries, but its contribution is limited at 28 GHz.",
+"scattering_region_hint": "Moderate to strong scattering may come from vehicles, rough walls, street furniture, and small objects near the corner.",
+"building_density_hint": "high",
+"material_hint": "Concrete and glass building facades dominate the propagation environment; glass surfaces and vehicle bodies may enhance specular reflection, while rough concrete and street objects may increase scattering.",
+"effective_scatterer_hint": "Nearby vehicles, building walls, street corners, glass facades, rough wall surfaces, and street objects are likely effective scatterers.",
+"spatial_variation_hint": "Strong spatial variation with localized high-loss regions behind vehicles and sharp pathloss transitions near the street corner.",
+"map_pattern_hint": "The generated pathloss map should show high pathloss behind the blocking vehicle and around the street corner, lower pathloss along reflection-supported street segments, and sharp spatial changes near vehicle and building-edge boundaries.",
+"conditioning_summary": "For dense urban 28 GHz vehicle blockage near street corner radio map generation, the prior should emphasize high pathloss, localized vehicle shadowing, reflection-supported NLOS propagation, and strong spatial variation near blockage boundaries."
+},
+{
+"case_id": "DU_018",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "dense urban intersection NLOS",
+"radio_map_task": "pathloss_map_generation",
+"dominant_mechanism": "reflection",
+"mechanism_weights": {
+"los": 0.02,
+"reflection": 0.58,
+"diffraction": 0.10,
+"scattering": 0.25,
+"penetration": 0.05
+},
+"pathloss_level_hint": "high",
+"los_region_hint": "LOS regions are very limited and may only appear near the transmitter or along short open street approaches before the intersection.",
+"nlos_region_hint": "NLOS regions are likely across the intersection, behind building corners, and along side streets where the direct path is blocked by dense urban structures.",
+"shadowing_region_hint": "Strong shadowing is expected behind intersection corner buildings and in streets that are not directly visible from the transmitter.",
+"blockage_region_hint": "Building blocks around the intersection are the main blockage sources, with possible additional blockage from vehicles and pedestrians near the street crossing.",
+"reflection_region_hint": "Strong reflected components are likely from building facades, glass walls, and corner surfaces around the intersection.",
+"diffraction_region_hint": "Weak diffraction may occur around building edges and intersection corners, but its contribution is limited at 28 GHz.",
+"scattering_region_hint": "Moderate scattering may come from rough building surfaces, vehicles, pedestrians, traffic signs, and other small objects near the intersection.",
+"building_density_hint": "high",
+"material_hint": "Concrete and glass facades are likely to dominate the propagation environment; glass surfaces may enhance specular reflection while rough concrete may increase scattering.",
+"effective_scatterer_hint": "Corner building facades, glass walls, vehicles, pedestrians, traffic signs, and rough street-side surfaces are likely effective scatterers.",
+"spatial_variation_hint": "Strong spatial variation with sharp pathloss transitions near intersection corners, blockage boundaries, and reflection-supported street segments.",
+"map_pattern_hint": "The generated pathloss map should show high pathloss in deep NLOS side streets, relatively lower pathloss along reflection-supported paths around the intersection, and sharp signal drops behind corner buildings.",
+"conditioning_summary": "For dense urban 28 GHz intersection NLOS radio map generation, the prior should emphasize reflection-dominant propagation, high pathloss, limited LOS coverage, strong corner shadowing, and sharp spatial variation around the intersection."
+},
+{
+"case_id": "DU_019",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "building blockage NLOS",
+"radio_map_task": "pathloss_map_generation",
+"dominant_mechanism": "reflection",
+"mechanism_weights": {
+"los": 0.02,
+"reflection": 0.58,
+"diffraction": 0.12,
+"scattering": 0.20,
+"penetration": 0.08
+},
+"pathloss_level_hint": "high",
+"los_region_hint": "LOS regions are very limited and may only appear near the transmitter or in open street segments not blocked by buildings.",
+"nlos_region_hint": "Most receiver locations behind building blocks are likely to be NLOS because the direct path is obstructed by dense urban structures.",
+"shadowing_region_hint": "Strong shadowing is expected in regions located behind large buildings and along streets where the direct path from the transmitter is blocked.",
+"blockage_region_hint": "Dense building blocks and tall urban structures are the main blockage sources, creating large NLOS and high-loss areas.",
+"reflection_region_hint": "Reflected components are likely along nearby building facades, glass surfaces, street canyon walls, and other smooth vertical structures.",
+"diffraction_region_hint": "Weak diffraction may occur around building edges and rooftop corners, but its contribution is limited at 28 GHz.",
+"scattering_region_hint": "Moderate scattering may come from rough concrete walls, irregular facades, vehicles, street furniture, and small urban objects.",
+"building_density_hint": "high",
+"material_hint": "Concrete and glass building facades are likely to dominate the environment; glass surfaces may support specular reflection, while rough concrete may increase scattering and penetration through buildings remains weak.",
+"effective_scatterer_hint": "Nearby building facades, building edges, street corners, vehicles, and rough wall surfaces are likely effective scatterers.",
+"spatial_variation_hint": "Strong spatial variation with sharp pathloss transitions near building blockage boundaries and behind dense urban structures.",
+"map_pattern_hint": "The generated pathloss map should show very high pathloss in building-shadowed NLOS regions, relatively lower pathloss along reflection-supported paths, and abrupt transitions near building edges and blocked street segments.",
+"conditioning_summary": "For dense urban 28 GHz building blockage NLOS radio map generation, the prior should emphasize high pathloss, large shadowed NLOS regions, reflection-supported propagation, weak diffraction, and sharp spatial changes around building boundaries."
+},
+{
+"case_id": "DU_020",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "rough concrete scattering",
+"radio_map_task": "pathloss_map_generation",
+"dominant_mechanism": "scattering",
+"mechanism_weights": {
+"los": 0.12,
+"reflection": 0.25,
+"diffraction": 0.05,
+"scattering": 0.53,
+"penetration": 0.05
+},
+"pathloss_level_hint": "high",
+"los_region_hint": "LOS regions may exist near the transmitter and along open street segments, but their coverage can be locally disturbed by rough concrete surfaces and dense building layouts.",
+"nlos_region_hint": "NLOS regions are likely behind building blocks, around street corners, and near areas where rough concrete facades interrupt direct or specular propagation paths.",
+"shadowing_region_hint": "Shadowing is expected behind dense concrete buildings, near facade discontinuities, and around corners where the direct path is blocked.",
+"blockage_region_hint": "Concrete building blocks, street corners, and dense urban structures are the main blockage sources.",
+"reflection_region_hint": "Reflected components may still appear along building facades and street walls, but rough concrete surfaces reduce clean specular reflection compared with smooth glass surfaces.",
+"diffraction_region_hint": "Weak diffraction may occur around concrete building edges and street corners, but its contribution is limited at 28 GHz.",
+"scattering_region_hint": "Strong scattering is likely from rough concrete walls, uneven facades, street furniture, vehicles, and small objects near building surfaces.",
+"building_density_hint": "high",
+"material_hint": "Rough concrete facades are likely to dominate the propagation environment by weakening specular reflection and increasing diffuse scattering; building penetration remains weak at 28 GHz.",
+"effective_scatterer_hint": "Rough concrete building walls, facade edges, street corners, vehicles, poles, and nearby urban objects are likely effective scatterers.",
+"spatial_variation_hint": "Strong spatial variation with irregular pathloss fluctuations near rough facades, blockage boundaries, and dense scattering regions.",
+"map_pattern_hint": "The generated pathloss map should show high pathloss in blocked NLOS regions, irregular local variations near rough concrete facades, and scattered low-to-medium loss patches where diffuse multipath supports coverage.",
+"conditioning_summary": "For dense urban 28 GHz rough concrete scattering radio map generation, the prior should emphasize scattering-dominant propagation, high pathloss, rough-facade-induced spatial irregularity, weak diffraction, limited penetration, and strong local variation near concrete building surfaces."
+},
+{
+"case_id": "DU_021",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "moving user beam misalignment",
+"radio_map_task": "pathloss_map_generation",
+"dominant_mechanism": "mixed",
+"mechanism_weights": {
+"los": 0.22,
+"reflection": 0.45,
+"diffraction": 0.05,
+"scattering": 0.23,
+"penetration": 0.05
+},
+"pathloss_level_hint": "high",
+"los_region_hint": "LOS regions may appear along open street segments, but the effective received signal can still degrade when the moving user beam is not aligned with the dominant path.",
+"nlos_region_hint": "NLOS regions are likely behind buildings, around street corners, and along trajectory segments where the moving user loses alignment with reflected or LOS paths.",
+"shadowing_region_hint": "Strong effective shadowing may appear along the user trajectory when beam misalignment occurs near blockage boundaries, turns, and dense building areas.",
+"blockage_region_hint": "Buildings, street corners, moving vehicles, pedestrians, and rapid changes in user direction are the main sources of blockage or beam misalignment risk.",
+"reflection_region_hint": "Reflection-supported regions are likely along building facades, glass surfaces, and street canyon walls, but their contribution depends strongly on whether the moving user beam remains aligned.",
+"diffraction_region_hint": "Weak diffraction may occur around building edges and street corners, but it is not expected to compensate strongly for beam misalignment at 28 GHz.",
+"scattering_region_hint": "Moderate scattering may come from rough concrete walls, vehicles, pedestrians, and street furniture along the moving user's path.",
+"building_density_hint": "high",
+"material_hint": "Concrete and glass facades dominate the dense urban environment; glass may provide strong specular reflections, while rough concrete and street objects may increase scattering.",
+"effective_scatterer_hint": "Building facades, street corners, vehicles, pedestrians, and rough wall surfaces near the moving user are likely effective scatterers.",
+"spatial_variation_hint": "Strong spatial variation with abrupt effective pathloss changes along the user trajectory due to beam misalignment, blockage, and changing dominant paths.",
+"map_pattern_hint": "The generated pathloss map should show localized high-loss regions along movement paths where beam misalignment occurs, lower pathloss in well-aligned LOS or reflection-supported areas, and sharp transitions near corners, blockers, and reflection boundaries.",
+"conditioning_summary": "For dense urban 28 GHz moving-user beam misalignment radio map generation, the prior should emphasize high effective pathloss, strong spatial variation, reflection-supported coverage, and localized signal degradation along trajectory segments where beam alignment is lost."
+},
+{
+"case_id": "DU_022",
+"scene_type": "dense urban",
+"frequency_GHz": 28,
+"condition": "indoor penetration from outdoor base station",
+"radio_map_task": "pathloss_map_generation",
+"dominant_mechanism": "penetration",
+"mechanism_weights": {
+"los": 0.08,
+"reflection": 0.27,
+"diffraction": 0.05,
+"scattering": 0.15,
+"penetration": 0.45
+},
+"pathloss_level_hint": "high",
+"los_region_hint": "LOS regions are mainly limited to outdoor areas near the base station and indoor zones close to windows or facades facing the transmitter.",
+"nlos_region_hint": "Most indoor receiver locations are likely to be NLOS, especially rooms behind exterior walls, interior partitions, or building cores.",
+"shadowing_region_hint": "Strong shadowing is expected inside the building behind concrete walls, behind interior partitions, and in deep indoor regions far from windows.",
+"blockage_region_hint": "Exterior building walls, window frames, concrete facades, floors, and interior partitions are the main blockage sources.",
+"reflection_region_hint": "Reflected components may appear near glass facades, exterior walls, window surfaces, and indoor wall surfaces close to the penetration points.",
+"diffraction_region_hint": "Weak diffraction may occur around window edges, door openings, facade corners, and building edges, but its contribution is limited at 28 GHz.",
+"scattering_region_hint": "Moderate scattering may come from rough concrete surfaces, indoor furniture, window frames, metallic objects, and small objects near penetration paths.",
+"building_density_hint": "high",
+"material_hint": "Concrete walls and dense building facades introduce strong penetration loss at 28 GHz, while glass windows may allow limited penetration and enhance specular reflection.",
+"effective_scatterer_hint": "Windows, glass facades, exterior walls, indoor walls, metallic frames, and nearby furniture are likely effective scatterers for indoor coverage.",
+"spatial_variation_hint": "Strong spatial variation is expected, with sharp pathloss changes between window-facing indoor regions and deep indoor shadowed areas.",
+"map_pattern_hint": "The generated pathloss map should show relatively lower pathloss near windows and facade-facing indoor zones, high pathloss in deep indoor regions, and sharp transitions across exterior walls and interior partitions.",
+"conditioning_summary": "For dense urban 28 GHz indoor penetration from an outdoor base station, the prior should emphasize high penetration loss, limited indoor LOS coverage, strong shadowing behind walls, and localized reflection or scattering near windows and facades."
+}
+
+]
